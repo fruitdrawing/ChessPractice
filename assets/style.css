@@ -112,23 +112,23 @@ body {
   }
 
 .Queen{
-    content: url("img/Queen.png");
+    content: url("/assets/images/Queen.png");
     
 }
 .Knight{
-    content: url("img/Knight.png");
+    content: url("/assets/images/Knight.png");
 }
 .King{
-    content: url("img/King.png");
+    content: url("/assets/images/King.png");
 
 }
 .Pawn {
-    content: url("img/Pawn.png");
+    content: url("/assets/images/Pawn.png");
 }
 .Bishop {
-    content: url("img/Bishop.png");
+    content: url("/assets/images/Bishop.png");
 }
 .Rook {
-    content: url("img/Rook.png");
+    content: url("/assets/images/Rook.png");
 
 }

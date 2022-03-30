@@ -1,6 +1,6 @@
-import { Cell } from "./cell.js";
-import { Team ,PieceType} from "./ChessApp.js";
-import { Piece } from "./Piece.js";
+import { Cell } from "./cell";
+import { Team ,PieceType} from "./ChessApp";
+import { Piece } from "./Piece";
 
 
 

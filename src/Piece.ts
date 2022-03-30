@@ -1,5 +1,5 @@
-import { Cell } from './cell.js';
-import { Team , PieceType} from './ChessApp.js';
+import { Cell } from './cell';
+import { Team , PieceType} from './ChessApp';
 
 export abstract class Piece{
     x:number;

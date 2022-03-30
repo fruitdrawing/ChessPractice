@@ -1,5 +1,5 @@
-import {Piece} from './Piece.js'
-import {Cell} from './cell.js'
+import {Piece} from './Piece'
+import {Cell} from './cell'
 
 export class MapInfo{
 
