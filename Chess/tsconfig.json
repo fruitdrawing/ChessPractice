@@ -1,0 +1,9 @@
+{
+    "compilerOptions": {
+        "target": "es6",
+        "module": "es2015",
+        "noImplicitAny": true,
+        "strictNullChecks": true,
+       "moduleResolution": "node"
+    }
+}

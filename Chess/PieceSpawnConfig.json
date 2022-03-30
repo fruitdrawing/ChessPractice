@@ -1,0 +1,18 @@
+{
+    "SpawnData" : [{
+
+    "pieceType" : "Pawn",
+    "team" : "North",
+    "x" : 0,
+    "y" : 0 
+}
+    ,
+    {
+        "pieceType" : "Pawn",
+        "team" : "North",
+        "x" : 0,
+        "y" : 0 
+    }
+
+]
+}
