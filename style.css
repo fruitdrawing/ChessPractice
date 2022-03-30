@@ -111,19 +111,19 @@
     
 }
 .Knight{
-    content: url("./img/Knight.png");
+    content: url("img/Knight.png");
 }
 .King{
-    content: url("./img/King.png");
+    content: url("img/King.png");
 
 }
 .Pawn {
-    content: url("./img/Pawn.png");
+    content: url("img/Pawn.png");
 }
 .Bishop {
-    content: url("./img/Bishop.png");
+    content: url("img/Bishop.png");
 }
 .Rook {
-    content: url("./img/Rook.png");
+    content: url("img/Rook.png");
 
 }
