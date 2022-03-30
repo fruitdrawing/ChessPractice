@@ -1,5 +1,5 @@
-import { Cell } from './cell.js';
-import { Piece } from './Piece.js';
+import { Cell } from './cell';
+import { Piece } from './Piece';
 
 import { GameState_PlayingState, GameState, Team } from './ChessApp.js';
 import { Pawn } from './Pawn.js';

@@ -1,4 +1,4 @@
-import { GameManager } from "./GameManager.js"
+import { GameManager } from "./GameManager"
 
 export class Cell{
     readonly x : number;
