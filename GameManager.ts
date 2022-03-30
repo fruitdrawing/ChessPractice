@@ -61,7 +61,7 @@ export class GameManager
                 break;
             case GameState.StaringGame:
                 this.startButton.setAttribute("stye","pointer-events: none");
-                this.startButton.setAttribute("stye","opacity: 0.2");
+                this.startButton.setAttribute("stye","opacity: 0.2");   
                 break;
 
             case GameState.NorthTeamTurn:
@@ -90,6 +90,7 @@ export class GameManager
     StartGame()
     {
         this.CurrentGameState = GameState.StaringGame;
+        this.startButton.classList.remove("movementAvailableCell");
         //Random Start Team;
         if(Math.floor(Math.random()) == 0)
         {
