@@ -1,3 +1,4 @@
+import { PieceType } from "./ChessApp";
 import { Piece } from "./Piece";
 
 export abstract class Command{
@@ -8,25 +9,39 @@ export abstract class Command{
     abstract Undo() : void;
 }
 
-class MoveCommand extends Command{
+
+export class MoveCommand extends Command{
 
     toX : number;
     toY : number;
     fromX : number;
     fromY : number;
-    subject : Piece;
+    pieceType : PieceType;
+    pieceRef : Piece;
     constructor(piece : Piece,toX:number,toY:number){
         super();
         this.toX = toX;
         this.toY = toY;
-        this.subject = piece;
+        this.pieceType = piece.PieceType;
+        this.pieceRef = piece;
         this.fromX = piece.x;
         this.fromY = piece.y;
 
     }
     Execute(): void {
-        this.subject.Move(this.toX,this.toY);
+        this.pieceRef.Move(this.toX,this.toY);
     }
     Undo(): void {
+    }
+}
+
+
+
+export class MoveAttackCommand extends MoveCommand{
+    constructor(piece : Piece ,x:number,y:number)
+    {
+        super(piece,x,y);
+
+
     }
 }

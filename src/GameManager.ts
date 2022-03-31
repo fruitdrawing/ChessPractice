@@ -7,6 +7,7 @@ import { Rook } from './Rook.js';
 import { Knight } from './Knight.js';
 import { Bishop } from './Bishop.js';
 import { King,Queen } from './King.js';
+import { Command, MoveCommand } from './Command';
 
 export class GameManager
 {
@@ -29,6 +30,7 @@ export class GameManager
     grid : HTMLElement;
     turnStateHtmlText : HTMLElement;
     winLostStateHtmlText : HTMLElement;
+    _commandList : Command[] = [];
 
     constructor()
     {
@@ -60,8 +62,8 @@ export class GameManager
 
                 break;
             case GameState.StaringGame:
-                this.startButton.setAttribute("stye","pointer-events: none");
-                this.startButton.setAttribute("stye","opacity: 0.2");   
+                this.startButton.setAttribute("stlye","pointer-events: none");
+                this.startButton.setAttribute("stlye","opacity: 0.2");   
                 break;
 
             case GameState.NorthTeamTurn:
@@ -75,8 +77,8 @@ export class GameManager
                 this.turnStateHtmlText.setAttribute("style","color:orange;");
                 break;
             case GameState.End:
-                this.startButton.setAttribute("stye","pointer-events: auto");
-                this.startButton.setAttribute("stye","opacity: 1");
+                this.startButton.setAttribute("stlye","pointer-events: auto");
+                this.startButton.setAttribute("stlye","opacity: 1");
             
                 break;
 
@@ -166,8 +168,9 @@ export class GameManager
                         targetPiece.Die();
                         targetPiece = undefined;
                     }
-                
-                    this.currentSelectedPiece!.Move(cell.x,cell.y);
+                    
+
+                    this._commandList.push(this.currentSelectedPiece!.Move(cell.x,cell.y)!);
 
                     this.ResetAllCellMovementAvailableState();
                     this.currentTurnState = GameState_PlayingState.TurnFinishing;

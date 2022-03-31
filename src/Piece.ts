@@ -1,6 +1,6 @@
 import { Cell } from './cell';
 import { Team , PieceType} from './ChessApp';
-
+import { MoveCommand } from './Command';
 export abstract class Piece{
     x:number;
     y:number;
@@ -33,7 +33,7 @@ export abstract class Piece{
     }
 
 
-    Move(x:number,y:number) : void
+    Move(x:number,y:number) : MoveCommand | undefined
     {
 
         let oldStandingCell : Cell = this.cellListRef.find(e => e.id == `${this.x},${this.y}`)!;
@@ -41,7 +41,7 @@ export abstract class Piece{
         if(!this.CanMoveToCellWithAttack(newStandingCell))
         {
             console.log("Movement Failed!");
-            return;
+            return undefined;
         }
         else
         {
@@ -55,6 +55,7 @@ export abstract class Piece{
             newStandingCell.SetOccupied(true);
             this.currentStandingCell = newStandingCell;
             console.log("Move Success");
+            return new MoveCommand(this,this.x,this.y);
         }
     }
     

@@ -1,9 +1,10 @@
 {
     "compilerOptions": {
-        "target": "es5",
-        "module": "ES2015",
+        "target": "es2015",
+        "module": "es2015",
         "noImplicitAny": true,
         "strictNullChecks": true,
-       "moduleResolution": "node"
+        "moduleResolution": "node",
+        "lib": ["dom", "es2018"],
     }
 }
