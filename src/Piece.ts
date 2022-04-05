@@ -1,6 +1,7 @@
 import { Cell } from './cell';
 import { Team , PieceType} from './ChessApp';
 import { MoveCommand } from './Command';
+import { Position } from './vector2';
 export abstract class Piece{
     x:number;
     y:number;
@@ -9,7 +10,7 @@ export abstract class Piece{
     team: Team;
     currentStandingCell : Cell;
     PieceType : PieceType;
-
+    Position  : Position;
     readonly cellListRef : Cell[]
     readonly pieceListRef : Piece[]
     constructor(x:number,y:number,team:Team,cellList:Cell[],pieceList:Piece[]){

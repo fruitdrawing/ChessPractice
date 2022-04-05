@@ -604,6 +604,7 @@ class GameManager {
         return this._currentGameState;
     }
     set CurrentGameState(value) {
+        var _a, _b;
         switch (value) {
             case GameState.Ready:
                 break;
@@ -613,13 +614,17 @@ class GameManager {
                 break;
             case GameState.NorthTeamTurn:
                 this.currentPlayingTeam = Team.North;
-                this.turnStateHtmlText.innerHTML = Team.North;
-                this.turnStateHtmlText.setAttribute("style", "color:aqua;");
+                if (this.turnStateHtmlText) {
+                    this.turnStateHtmlText.innerHTML = Team.North;
+                }
+                (_a = this.turnStateHtmlText) === null || _a === void 0 ? void 0 : _a.setAttribute("style", "color:aqua;");
                 break;
             case GameState.SouthTeamTurn:
                 this.currentPlayingTeam = Team.South;
-                this.turnStateHtmlText.innerHTML = Team.South;
-                this.turnStateHtmlText.setAttribute("style", "color:orange;");
+                if (this.turnStateHtmlText) {
+                    this.turnStateHtmlText.innerHTML = Team.South;
+                }
+                (_b = this.turnStateHtmlText) === null || _b === void 0 ? void 0 : _b.setAttribute("style", "color:orange;");
                 break;
             case GameState.End:
                 this.startButton.setAttribute("stlye", "pointer-events: auto");
@@ -696,6 +701,7 @@ class GameManager {
                 }
                 break;
         }
+        // document.addEventListener('click', () => {})
         if (this.CheckWinState() != undefined) {
             console.log("Check Win State");
             this.SetWin(this.CheckWinState());

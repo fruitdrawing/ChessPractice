@@ -28,14 +28,14 @@ export class GameManager
     currentSelectedPiece : Piece | undefined;
     currentPlayingTeam : Team;
     grid : HTMLElement;
-    turnStateHtmlText : HTMLElement;
-    winLostStateHtmlText : HTMLElement;
+    turnStateHtmlText : HTMLElement | null;
+    winLostStateHtmlText : HTMLElement| null;
     _commandList : Command[] = [];
 
     constructor()
     {
         this.mainDiv = document.getElementById('grid')!;
-        this.turnStateHtmlText = document.getElementById('TurnStatus')!;
+        this.turnStateHtmlText = document.getElementById('TurnStatus');
         this.winLostStateHtmlText = document.getElementById('WinText')!;
         this.startButton = document.getElementById('StartButton')!;
         this.resetButton = document.getElementById('ResetButton')!;
@@ -68,13 +68,20 @@ export class GameManager
 
             case GameState.NorthTeamTurn:
                 this.currentPlayingTeam = Team.North;
-                this.turnStateHtmlText.innerHTML = Team.North
-                this.turnStateHtmlText.setAttribute("style","color:aqua;");
+                if(this.turnStateHtmlText)
+                {
+                    this.turnStateHtmlText.innerHTML = Team.North;
+                }
+                this.turnStateHtmlText?.setAttribute("style","color:aqua;");
                 break;
             case GameState.SouthTeamTurn:
                 this.currentPlayingTeam = Team.South;
-                this.turnStateHtmlText.innerHTML = Team.South;
-                this.turnStateHtmlText.setAttribute("style","color:orange;");
+                if(this.turnStateHtmlText)
+                {
+                    this.turnStateHtmlText.innerHTML = Team.South;
+
+                }
+                this.turnStateHtmlText?.setAttribute("style","color:orange;");
                 break;
             case GameState.End:
                 this.startButton.setAttribute("stlye","pointer-events: auto");
@@ -197,6 +204,8 @@ export class GameManager
                 break;
         }
 
+        
+        // document.addEventListener('click', () => {})
         
         if(this.CheckWinState() != undefined)
         {
