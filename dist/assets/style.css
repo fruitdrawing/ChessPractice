@@ -123,12 +123,12 @@ body {
 
 }
 .Pawn {
-    content: url("./assets/images/Pawn.png");
+    content: url("../assets/images/Pawn.png");
 }
 .Bishop {
-    content: url("./assets/images/Bishop.png");
+    content: url("../assets/images/Bishop.png");
 }
 .Rook {
-    content: url("./assets/images/Rook.png");
+    content: url("../assets/images/Rook.png");
 
 }
