@@ -1,5 +1,5 @@
 import {Piece} from './Piece'
-import {Cell} from './cell'
+import {Cell} from './Cell'
 
 export class MapInfo{
 

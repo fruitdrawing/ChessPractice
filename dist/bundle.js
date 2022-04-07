@@ -266,14 +266,14 @@ class Pawn extends Piece {
 
 class Rook extends Piece {
     FindMovementAvailableCells(cellList) {
-        let teamCellList = [];
+        let output = [];
         let northCell = this.FindNorthCell(this.currentStandingCell);
         let westCell = this.FindWestCell(this.currentStandingCell);
         let eastCell = this.FindEastCell(this.currentStandingCell);
         let southCell = this.FindSouthCell(this.currentStandingCell);
         for (let i = 0; i < 8; i++) {
             if (northCell && this.CanMoveToCellWithAttack(northCell)) {
-                teamCellList.push(northCell);
+                output.push(northCell);
                 northCell = this.FindNorthCell(northCell);
                 continue;
             }
@@ -283,7 +283,7 @@ class Rook extends Piece {
         }
         for (let i = 0; i < 8; i++) {
             if (westCell && this.CanMoveToCellWithAttack(westCell)) {
-                teamCellList.push(westCell);
+                output.push(westCell);
                 westCell = this.FindWestCell(westCell);
                 continue;
             }
@@ -293,7 +293,7 @@ class Rook extends Piece {
         }
         for (let i = 0; i < 8; i++) {
             if (eastCell && this.CanMoveToCellWithAttack(eastCell)) {
-                teamCellList.push(eastCell);
+                output.push(eastCell);
                 eastCell = this.FindEastCell(eastCell);
                 continue;
             }
@@ -303,7 +303,7 @@ class Rook extends Piece {
         }
         for (let i = 0; i < 8; i++) {
             if (southCell && this.CanMoveToCellWithAttack(southCell)) {
-                teamCellList.push(southCell);
+                output.push(southCell);
                 southCell = this.FindSouthCell(southCell);
                 continue;
             }
@@ -311,7 +311,7 @@ class Rook extends Piece {
                 break;
             }
         }
-        return teamCellList;
+        return output;
     }
     constructor(x, y, team, cellList, pieceList) {
         super(x, y, team, cellList, pieceList);

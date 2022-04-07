@@ -1,10 +1,10 @@
-import { Cell } from "./cell";
+import { Cell } from "./Cell";
 import { Team ,PieceType} from "./ChessApp";
 import { Piece } from "./Piece";
 
 export class Rook extends Piece{
     FindMovementAvailableCells(cellList : Cell[]) : Cell[] | undefined {
-        let teamCellList : Cell[] | undefined = [];
+        let output : Cell[] | undefined = [];
         let northCell : Cell | undefined = this.FindNorthCell(this.currentStandingCell);
         let westCell : Cell | undefined = this.FindWestCell(this.currentStandingCell);
         let eastCell : Cell | undefined = this.FindEastCell(this.currentStandingCell);
@@ -14,7 +14,7 @@ export class Rook extends Piece{
         {
             if(northCell && this.CanMoveToCellWithAttack(northCell))
             {
-                teamCellList.push(northCell);
+                output.push(northCell);
                 northCell = this.FindNorthCell(northCell);
                 continue;
             }
@@ -27,7 +27,7 @@ export class Rook extends Piece{
         {
             if(westCell && this.CanMoveToCellWithAttack(westCell))
             {
-                teamCellList.push(westCell);
+                output.push(westCell);
                 westCell = this.FindWestCell(westCell);
                 continue;
             }
@@ -40,7 +40,7 @@ export class Rook extends Piece{
         {
             if(eastCell&& this.CanMoveToCellWithAttack(eastCell))
             {
-                teamCellList.push(eastCell);
+                output.push(eastCell);
                 eastCell = this.FindEastCell(eastCell);
                 continue;
             }
@@ -53,7 +53,7 @@ export class Rook extends Piece{
         {
             if(southCell&& this.CanMoveToCellWithAttack(southCell))
             {
-                teamCellList.push(southCell);
+                output.push(southCell);
                 southCell = this.FindSouthCell(southCell);
                 continue;
             }
@@ -63,7 +63,7 @@ export class Rook extends Piece{
             }
         }
         
-        return teamCellList;
+        return output;
 
     }
     constructor(x:number,y:number,team:Team,cellList:Cell[],pieceList:Piece[])

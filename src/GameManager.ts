@@ -1,4 +1,4 @@
-import { Cell } from './cell';
+import { Cell } from './Cell';
 import { Piece } from './Piece';
 
 import { GameState_PlayingState, GameState, Team } from './ChessApp.js';

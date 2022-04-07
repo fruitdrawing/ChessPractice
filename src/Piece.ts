@@ -1,4 +1,4 @@
-import { Cell } from './cell';
+import { Cell } from './Cell';
 import { Team , PieceType} from './ChessApp';
 import { MoveCommand } from './Command';
 import { Position } from './vector2';
