@@ -126,7 +126,7 @@ body {
     content: url("/assets/images/Pawn.png");
 }
 .Bishop {
-    content: url("/assets/images/Bishop.png");
+    content: url("images/Bishop.png");
 }
 .Rook {
     content: url("images/Rook.png");
