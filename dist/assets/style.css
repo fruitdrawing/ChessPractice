@@ -112,14 +112,14 @@ body {
   }
 
 .Queen{
-    content: url("./assets/images/Queen.png");
+    content: url("../assets/images/Queen.png");
     
 }
 .Knight{
-    content: url("./assets/images/Knight.png");
+    content: url("../assets/images/Knight.png");
 }
 .King{
-    content: url("./assets/images/King.png");
+    content: url("../assets/images/King.png");
 
 }
 .Pawn {
