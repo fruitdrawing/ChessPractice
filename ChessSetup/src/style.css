@@ -5,6 +5,11 @@ body {
 #StartButton{
     width : 80px;
     height : 40px;
+    transition-duration: 500ms;
+}
+
+#StartButton:hover{
+  width : 120px;
 }
 #Header{
     text-align: center;
@@ -130,4 +135,16 @@ body {
 }
 .Rook {
     content: url("./images/Rook.png");
+}
+
+.Debug{
+  margin : 0px auto;
+  display : inline;
+  position : absolute;
+  background-color: lightcoral;
+  transition-duration: 0.5s;
+}
+
+.Debug:hover{
+  background-color : black;
 }

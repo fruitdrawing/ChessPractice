@@ -1,3 +1,4 @@
+import { FirebaseManager } from "./FirebaseManager";
 import { GameManager } from "./GameManager";
 
 export enum GameState { Ready, StaringGame,SouthTeamTurn,NorthTeamTurn, End};
@@ -9,10 +10,14 @@ export enum PieceType { Pawn, Knight, Bishop, Queen, King, Rook}
 
 export class ChessApp{
     gameManager : GameManager;
+    firebaseManager : FirebaseManager;
+
     constructor(){
         this.gameManager = new GameManager();
         this.gameManager.SpawnCells();
         this.gameManager.SpawnPieces();
+        this.firebaseManager = new FirebaseManager();
+        
     }
 }
 

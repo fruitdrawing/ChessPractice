@@ -1,9 +1,9 @@
 import {ChessApp} from './ChessApp';
-import { writeUserData } from './FirebaseManager';
+import { Debug } from './Debug';
 
 
 const chessApp = new ChessApp();
-
+const debug = new Debug();
 
 export default chessApp;
 
