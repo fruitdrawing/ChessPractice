@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav class="nav">
+        <button class="debug-button">1.main</button>
+        <button class="debug-button">2. join menu</button>
+        <button class="debug-button">3.Single play</button>
+        <button class="debug-button">4.Multiplay </button>
+
+    </nav>
+    <div class="main">
+        <div class="mainScreen" id="1">
+            <h1>Super Chess</h1>
+            <p><button class="mainscreen-button">Single Play</button></p>
+            <p><button class="mainscreen-button">Online Play</button></p>
+
+
+
+        </div>
+        <div class="joinScreen" id="2">
+
+            Join Screen<p></p>
+            <div class="joinScreen-parent">
+                <div class="joinScreen-top">
+                    <p id="nickname-display"></p>
+                    Your Name : <input id="nick-name-input"><button id="nickname-submit-button"
+                        class="primary-button">Submit</button>
+                </div>
+                <div class="joinScreen-left">Room Title :<input id="room-title-input"><br><button id="host-button"
+                        class="primary-button">Host</button></div>
+                <div class="joinScreen-right">Room List <span> </span> <button>Refresh</button>
+                    <p></p>
+                    <div>
+                        <div id="room-list" class="room-list">
+                            <!-- <button class="room-list-button">come on</button>
+                            <button class="room-list-button">come on</button>
+                            <!-- <button class="room-list-button">come on</button> -->
+                            <!-- <button class="room-list-button">come on</button>
+                            <button class="room-list-button">come on</button>
+                            <button class="room-list-button">come on</button>
+                            <button class="room-list-button">come on</button>
+                            <button class="room-list-button">come on</button> --> -->
+                        </div>
+                    </div><button class=" primary-button">Join!</button>
+                </div>
+            </div>
+        </div>
+        <div class="singlePlayScreen" id="3">
+            SinglePlay Screen
+        </div>
+        <div class="multiplayerScreen" id="4">
+            Multiplayer Screen
+            <div id="multiplayer-chessboard"></div>
+        </div>
+    </div>
+    <script type="module" src="client.js"></script>
+
+</body>
+
+</html>
