@@ -42,7 +42,7 @@ class ServerManager {
                 methods: ["GET", "POST"]
             }
         });
-        this.port = 3001;
+        this.port = process.env.PORT || 3000;
         this.serverRooms = [];
         console.log("init");
         this.app.use(express_1.default.static('./client/dist'));
