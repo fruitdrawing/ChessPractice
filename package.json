@@ -13,6 +13,6 @@
     "typescript": "^4.6.3"
   },
   "scripts": {
-    "start": "cd client && npm install && npm run build && cd .. && ts-node server/Main.ts"
+    "start": "cd client && npm install && npm run build && cd .. && ts-node server/dist/Main.js"
   }
 }
