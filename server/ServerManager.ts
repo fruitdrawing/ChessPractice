@@ -15,7 +15,7 @@ export class ServerManager {
         }
     })
 
-    port = 3001;
+    port = process.env.PORT || 3000;
     serverRooms: ChessRoom[] = [];
     constructor() {
         console.log("init");
@@ -219,7 +219,6 @@ export class ServerManager {
 
 }
 
-
 interface ChessRoom {
     roomTitle: string;
     isPlaying: boolean;
@@ -230,7 +229,6 @@ interface ChessRoom {
     hostNickName: string;
     chessGameInfo: ChessGame.ChessGameInfo;
 }
-
 
 
 export class CellSelectionInfo {
