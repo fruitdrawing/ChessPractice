@@ -1,9 +1,9 @@
 import * as client from './client';
 
 export class DebugManager {
-    dialog: HTMLDialogElement = document.getElementById('modal') as HTMLDialogElement;
+    // dialog: HTMLDialogElement = document.getElementById('modal') as HTMLDialogElement;
     constructor() {
-        this.DoDebugMode();
+        // this.DoDebugMode();
     }
     DoDebugMode() {
 

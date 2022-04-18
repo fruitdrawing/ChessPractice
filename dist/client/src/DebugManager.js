@@ -2,9 +2,9 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.DebugManager = void 0;
 class DebugManager {
+    // dialog: HTMLDialogElement = document.getElementById('modal') as HTMLDialogElement;
     constructor() {
-        this.dialog = document.getElementById('modal');
-        this.DoDebugMode();
+        // this.DoDebugMode();
     }
     DoDebugMode() {
         document.addEventListener('keydown', (key) => {

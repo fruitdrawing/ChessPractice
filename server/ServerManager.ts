@@ -20,7 +20,7 @@ export class ServerManager {
     serverRooms: ChessRoom[] = [];
     constructor() {
         console.log("init");
-        this.app.use(express.static('../client/dist'));
+        this.app.use(express.static('./client/dist'));
         this.app.use(helmet());
         this.server.listen(this.port, () => {
             console.log(`listening on port ${this.port}`)

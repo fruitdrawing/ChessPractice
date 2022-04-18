@@ -46,7 +46,7 @@ class ServerManager {
         this.port = process.env.PORT || 3000;
         this.serverRooms = [];
         console.log("init");
-        this.app.use(express_1.default.static('../client/dist'));
+        this.app.use(express_1.default.static('./client/dist'));
         this.app.use((0, helmet_1.default)());
         this.server.listen(this.port, () => {
             console.log(`listening on port ${this.port}`);

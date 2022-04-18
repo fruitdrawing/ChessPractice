@@ -547,7 +547,7 @@ export class ChessGameInfo {
         }
     }
     GetSouthEastCell(position: ChessGame.Vector2): ChessGame.Cell | null {
-        if (position.x == 0 || position.y == 7) return null;
+        if (position.x == 7 || position.y == 7) return null;
         return this.grid[position.x + 1][position.y + 1];
     }
     GetWestCell(position: ChessGame.Vector2): ChessGame.Cell | null {
