@@ -397,3 +397,22 @@ nav {
 .hide {
     display: none;
 }
+
+.OutlineGlow {
+    animation: glowOutline 500ms infinite;
+}
+
+
+@keyframes glowOutline {
+    0% {
+        filter: drop-shadow(0 0 0.1rem rgb(0, 0, 0));
+    }
+
+    100% {
+        filter: drop-shadow(0 0 0.3rem rgb(0, 255, 100));
+    }
+}
+
+input {
+    height: 25px;
+}
