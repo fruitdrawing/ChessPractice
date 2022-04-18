@@ -1,6 +1,4 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.Position = void 0;
-class Position {
-}
-exports.Position = Position;
+const client_1 = require("./client");
+const App = new client_1.ClientApp();
